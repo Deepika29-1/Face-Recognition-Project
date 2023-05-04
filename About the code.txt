@@ -1,0 +1,9 @@
+This Python code uses the face_recognition library and OpenCV (cv2) to recognize faces in images. 
+The code first loads a set of known images with faces and their respective names from a specified path using os library. 
+For each image, the code extracts the facial encoding using face_encodings function of face_recognition library and stores it along with the corresponding name in separate lists.
+
+Then, the code loads a test image containing one or more faces and extracts the face locations and encodings using face_locations and face_encodings functions of face_recognition. 
+It then compares each extracted face encoding with the known face encodings using compare_faces function and finds the best match by calculating the Euclidean distance between them using face_distance function.
+
+Finally, the code draws a rectangle around each recognized face and labels them with their corresponding name using cv2 functions.
+The resulting image is displayed on the screen and saved as a file named output.jpg.
